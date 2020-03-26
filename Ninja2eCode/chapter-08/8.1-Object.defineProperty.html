@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>通过Object.Property定义getter与setter</title>
+</head>
+
+<body>
+
+</body>
+<script>
+  // 定义构造函数
+function Ninja(){
+  //定义私有变量，通过闭包访问该变量
+  let __skillLevel = 0;
+  //配置属性
+  Object.defineProperty(this,'skillLevel',{
+    get:()=>{
+      console.log('the get method is called')
+      return __skillLevel
+    },
+    set:value=>{
+      console.log('the set method is called')
+      __skillLevel = value;
+    }
+  })
+  
+}
+
+const ninja = new Ninja()
+ console.log(ninja.__skillLevel)
+ console.log(ninja.skillLevel===0)
+ ninja.__skillLevel = 10
+ console.log(ninja.skillLevel)
+</script>
+
+</html>

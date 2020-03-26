@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>使用getter与setter控制属性访问</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // 对象字面量定义getter和setter
+    const ninjaCollection = {
+        ninjas: ['a', 'b', 'c', 'd'],
+        get firstNinja() {
+            console.log('getting first ninja')
+            return this.ninjas[0]
+        },
+        set firstNinja(value) {
+            console.log('setting first ninja')
+            this.ninjas[0] = value
+        }
+    }
+
+
+    console.log(ninjaCollection.firstNinja)
+    ninjaCollection.firstNinja = 'z'
+    console.log(ninjaCollection.firstNinja)
+    // es6  class 定义getter和setter
+    class NinjaCollection {
+        constructor() {
+            this.ninjas = ['a', 'b', 'c', 'd']
+        }
+        get firstNinja() {
+            console.log('getting first ninja')
+            return this.ninjas[0]
+        }
+        set firstNinja(value) {
+            console.log('setting first ninja')
+            this.ninjas[0] = value
+        }
+    }
+
+    const ninjaCollection = new NinjaCollection()
+
+    console.log(ninjaCollection.firstNinja)
+    ninjaCollection.firstNinja = 'z'
+    console.log(ninjaCollection.firstNinja)
+</script>
+
+</html>
