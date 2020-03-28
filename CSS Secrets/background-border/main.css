@@ -1,0 +1,20 @@
+
+* {
+    margin: 0;
+}
+div#border-container{
+    background: url('./images/stone-art.jpg');
+    height: 100vh;
+    overflow: hidden;
+}
+
+div.translucent-border{
+    border: 10px solid hsla(0, 0%, 100%, .5);
+    background: white;
+    background-clip: padding-box;
+
+    max-width: 20em;
+    padding: 2em;
+    margin: 2em auto 0;
+   font: 100%/1.5 sans-serif;
+}
