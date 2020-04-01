@@ -2,9 +2,9 @@
 * {
     margin: 0;
 }
+
 div#border-container{
     background: url('./images/stone-art.jpg');
-    height: 100vh;
     overflow: hidden;
 }
 
@@ -12,9 +12,79 @@ div.translucent-border{
     border: 10px solid hsla(0, 0%, 100%, .5);
     background: white;
     background-clip: padding-box;
-
     max-width: 20em;
     padding: 2em;
     margin: 2em auto 0;
    font: 100%/1.5 sans-serif;
+}
+
+div#multiple-border-container{
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+}
+div.multiple-border{
+    width: 160px;
+    height: 100px;
+    background-color: yellowgreen;
+    box-shadow: 0 0 0 10px #655,
+                0 0 0 15px deeppink,
+                0 2px 5px 15px rgba(0, 0, 0, .6)  
+}
+
+div.multiple-border-inset{
+    width: 160px;
+    height: 100px;
+    background-color: pink;
+    box-shadow:inset 0 0 0 10px #655;
+    padding: 10px;
+}
+
+div.multiple-border-outline{
+    width: 160px;
+    height: 100px;
+    background: yellowgreen;
+    border:10px solid #655 ;
+    outline: 5px solid deeppink;
+    /* 圆角 */
+    /* border:2px solid #655 ;
+    border-radius: 15px;
+    outline: 2px solid deeppink; */
+}
+
+#flexible-background-position{
+    display: flex;
+    justify-content: space-around;
+
+}
+.extended-background-position{
+    background:url('./images/star.png') no-repeat #58a;
+    background-position: right 20px bottom 10px;
+    /* styling */
+    min-width: 200px;
+    max-width: 10em;
+    min-height: 5em;
+    padding: 10px;
+    color: white;
+}
+.background-origin{
+    background:url('./images/star.png') no-repeat #58a bottom right;
+    background-origin: content-box;
+    /* styling */
+    min-width: 200px;
+    max-width: 10em;
+    min-height: 5em;
+    padding: 10px;
+    color: white;
+}
+
+.background-position-calc{
+    background:url('./images/star.png') no-repeat #58a bottom right; 
+    background-position: calc(100% - 20px) calc(100% - 10px);
+      /* styling */
+      min-width: 200px;
+      max-width: 10em;
+      min-height: 5em;
+      padding: 10px;
+      color: white;
 }
