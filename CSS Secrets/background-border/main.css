@@ -3,6 +3,7 @@
     margin: 0;
 }
 
+/* 1-半透明边框 */
 div#border-container{
     background: url('./images/stone-art.jpg');
     overflow: hidden;
@@ -18,6 +19,7 @@ div.translucent-border{
    font: 100%/1.5 sans-serif;
 }
 
+/* 2-多重边框 */
 div#multiple-border-container{
     display: flex;
     justify-content: space-around;
@@ -52,6 +54,7 @@ div.multiple-border-outline{
     outline: 2px solid deeppink; */
 }
 
+/* 3-灵活的背景定位 */
 #flexible-background-position{
     display: flex;
     justify-content: space-around;
@@ -87,4 +90,24 @@ div.multiple-border-outline{
       min-height: 5em;
       padding: 10px;
       color: white;
+}
+/* 4-边框内圆角 */
+#inner-rounding{
+    display: flex;
+    justify-content: space-around;
+}
+.outline-and-shadow{
+    margin: 20px;
+    outline: 8px solid lightblue;
+    box-shadow: 0 0 0 6px lightblue;
+    border-radius: 5px;
+    max-width: 12em;
+
+}
+.box-shadow-border{
+    margin: 20px;
+    outline: 10px solid lightblue;
+    box-shadow: 0 0 0 8px red;
+    border-radius: 8px;
+    max-width: 12em;
 }
