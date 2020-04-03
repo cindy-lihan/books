@@ -1,113 +1,181 @@
-
 * {
-    margin: 0;
+  margin: 0;
 }
 
 /* 1-半透明边框 */
-div#border-container{
-    background: url('./images/stone-art.jpg');
-    overflow: hidden;
+div#border-container {
+  background: url("./images/stone-art.jpg");
+  overflow: hidden;
 }
 
-div.translucent-border{
-    border: 10px solid hsla(0, 0%, 100%, .5);
-    background: white;
-    background-clip: padding-box;
-    max-width: 20em;
-    padding: 2em;
-    margin: 2em auto 0;
-   font: 100%/1.5 sans-serif;
+div.translucent-border {
+  border: 10px solid hsla(0, 0%, 100%, 0.5);
+  background: white;
+  background-clip: padding-box;
+  max-width: 20em;
+  padding: 2em;
+  margin: 2em auto 0;
+  font: 100%/1.5 sans-serif;
 }
 
 /* 2-多重边框 */
-div#multiple-border-container{
-    display: flex;
-    justify-content: space-around;
-    margin: 20px;
+div#multiple-border-container {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px;
 }
-div.multiple-border{
-    width: 160px;
-    height: 100px;
-    background-color: yellowgreen;
-    box-shadow: 0 0 0 10px #655,
-                0 0 0 15px deeppink,
-                0 2px 5px 15px rgba(0, 0, 0, .6)  
-}
-
-div.multiple-border-inset{
-    width: 160px;
-    height: 100px;
-    background-color: pink;
-    box-shadow:inset 0 0 0 10px #655;
-    padding: 10px;
+div.multiple-border {
+  width: 160px;
+  height: 100px;
+  background-color: yellowgreen;
+  box-shadow: 0 0 0 10px #655, 0 0 0 15px deeppink,
+    0 2px 5px 15px rgba(0, 0, 0, 0.6);
 }
 
-div.multiple-border-outline{
-    width: 160px;
-    height: 100px;
-    background: yellowgreen;
-    border:10px solid #655 ;
-    outline: 5px solid deeppink;
-    /* 圆角 */
-    /* border:2px solid #655 ;
+div.multiple-border-inset {
+  width: 160px;
+  height: 100px;
+  background-color: pink;
+  box-shadow: inset 0 0 0 10px #655;
+  padding: 10px;
+}
+
+div.multiple-border-outline {
+  width: 160px;
+  height: 100px;
+  background: yellowgreen;
+  border: 10px solid #655;
+  outline: 5px solid deeppink;
+  /* 圆角 */
+  /* border:2px solid #655 ;
     border-radius: 15px;
     outline: 2px solid deeppink; */
 }
 
 /* 3-灵活的背景定位 */
-#flexible-background-position{
-    display: flex;
-    justify-content: space-around;
+#flexible-background-position {
+  display: flex;
+  justify-content: space-around;
+}
+.extended-background-position {
+  background: url("./images/star.png") no-repeat #58a;
+  background-position: right 20px bottom 10px;
+  /* styling */
+  min-width: 200px;
+  max-width: 10em;
+  min-height: 5em;
+  padding: 10px;
+  color: white;
+}
+.background-origin {
+  background: url("./images/star.png") no-repeat #58a bottom right;
+  background-origin: content-box;
+  /* styling */
+  min-width: 200px;
+  max-width: 10em;
+  min-height: 5em;
+  padding: 10px;
+  color: white;
+}
 
-}
-.extended-background-position{
-    background:url('./images/star.png') no-repeat #58a;
-    background-position: right 20px bottom 10px;
-    /* styling */
-    min-width: 200px;
-    max-width: 10em;
-    min-height: 5em;
-    padding: 10px;
-    color: white;
-}
-.background-origin{
-    background:url('./images/star.png') no-repeat #58a bottom right;
-    background-origin: content-box;
-    /* styling */
-    min-width: 200px;
-    max-width: 10em;
-    min-height: 5em;
-    padding: 10px;
-    color: white;
-}
-
-.background-position-calc{
-    background:url('./images/star.png') no-repeat #58a bottom right; 
-    background-position: calc(100% - 20px) calc(100% - 10px);
-      /* styling */
-      min-width: 200px;
-      max-width: 10em;
-      min-height: 5em;
-      padding: 10px;
-      color: white;
+.background-position-calc {
+  background: url("./images/star.png") no-repeat #58a bottom right;
+  background-position: calc(100% - 20px) calc(100% - 10px);
+  /* styling */
+  min-width: 200px;
+  max-width: 10em;
+  min-height: 5em;
+  padding: 10px;
+  color: white;
 }
 /* 4-边框内圆角 */
-#inner-rounding{
-    display: flex;
-    justify-content: space-around;
+#inner-rounding {
+  display: flex;
+  justify-content: space-around;
 }
-.outline-and-shadow{
-    margin: 20px;
-    outline: 8px solid lightblue;
-    box-shadow: 0 0 0 6px lightblue;
-    border-radius: 5px;
-    max-width: 12em;
+.outline-and-shadow {
+  margin: 20px;
+  outline: 8px solid lightblue;
+  box-shadow: 0 0 0 6px lightblue;
+  border-radius: 5px;
+  max-width: 12em;
+}
+.box-shadow-border {
+  margin: 20px;
+  outline: 10px solid lightblue;
+  box-shadow: 0 0 0 8px red;
+  border-radius: 8px;
+  max-width: 12em;
+}
 
+.horizontal-background {
+  display: flex;
+  justify-content: space-around;
 }
-.box-shadow-border{
-    margin: 20px;
-    outline: 10px solid lightblue;
-    box-shadow: 0 0 0 8px red;
-    border-radius: 8px;
-    max-width: 12em;
+
+.horizontal-stripes {
+  width: 240px;
+  height: 240px;
+  /* 某个色标的位置值比整个列表中在它之前的色标位置都笑，则被设置为它之前所以色标的最大值 */
+  background: linear-gradient(#fb3 50%, #58a 0);
+  background-size: 100% 30px;
+}
+
+.horizontal-stripes-no {
+  width: 240px;
+  height: 240px;
+  background: linear-gradient(#fb3 30%, #58a 0);
+  background-size: 100% 30px;
+}
+
+.horizontal-stripes-multi {
+  width: 240px;
+  height: 240px;
+  background: linear-gradient(#fb3 33.3%, #58a 0, #58a 66.6%, yellowgreen 0);
+  background-size: 100% 30px;
+}
+
+.vertical-stripes {
+  margin-left: 60px;
+  width: 200px;
+  height: 200px;
+  /* 默认是to bottom */
+  background: linear-gradient(to right, #fb3 50%, #58a 0);
+  background-size: 30px 100%;
+}
+.diagonal-stripes {
+  display: flex;
+  justify-content: space-around;
+}
+
+.diagonal-stripes-test2 {
+  width: 200px;
+  height: 200px;
+  background: linear-gradient(45deg, #fb3 50%, #58a 0);
+  background-size: 30px 30px;
+}
+
+.diagonal-stripes-true {
+  width: 200px;
+  height: 200px;
+  background: linear-gradient(45deg, #fb3 25%, #58a 0, #58a 50%, #fb3 0, #fb3 75%, #58a 0 ); 
+    background-size: 42.4px 42.4px;
+}
+
+.diagonal-stripes-repeat {
+  width: 200px;
+  height: 200px;
+  background: repeating-linear-gradient( 60deg, #fb3, #fb3 15px, #58a 0, #58a 30px );
+  /*  等价于
+  background: repeating-linear-gradient( 60deg, #fb3, #fb3 15px, #58a 15px, #58a 30px ,#fb3 30px, #fb3 45px,...);
+  */
+}
+
+.Subtle-stripes{
+    width: 200px;
+    height: 200px;
+    background: #58a;
+    background-image: repeating-linear-gradient(30deg, 
+    hsla(0,0%,100%,.1), hsla(0,0%,100%,.1) 15px,
+    transparent 0, transparent 30px);
 }
