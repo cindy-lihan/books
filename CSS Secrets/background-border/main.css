@@ -255,3 +255,21 @@ div.multiple-border-outline {
   background-position: 0 0, 15px 15px;
   background-size: 30px 30px;
 }
+
+.cicada-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.cicada-stripes{
+  width: 400px;
+  height: 200px;
+  background: hsl(20, 40%, 90%);
+  background-image: 
+	linear-gradient(90deg, #fb3 11px, transparent 0),
+	linear-gradient(90deg, #ab4 23px, transparent 0),
+	linear-gradient(90deg, #655 23px, transparent 0);
+  background-size: 83px 100%, 61px 100%, 41px 100%;
+
+}
