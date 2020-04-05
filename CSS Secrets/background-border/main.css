@@ -256,7 +256,7 @@ div.multiple-border-outline {
   background-size: 30px 30px;
 }
 
-.cicada-container{
+.one-div-container{
   display: flex;
   align-items: center;
   justify-content: center;
@@ -272,4 +272,62 @@ div.multiple-border-outline {
 	linear-gradient(90deg, #655 23px, transparent 0);
   background-size: 83px 100%, 61px 100%, 41px 100%;
 
+}
+
+.continuous-image-borders{
+  width: 200px;
+  height: 200px;
+  border: 1em solid transparent;
+  background-image: linear-gradient(white,white),
+              url("./images/stone-art.jpg"); 
+  padding: 1em;
+  background-size:cover ;
+  background-clip:padding-box, border-box ;
+  background-origin: border-box;
+/* 在每一层中，下列的值可以出现 0 次或 1 次：
+<attachment>
+<bg-image>
+<position>
+<bg-size>
+<repeat-style>
+<bg-size> 只能紧接着 <position> 出现，以"/"分割，如： "center/80%".
+<box> 可能出现 0 次、1 次或 2 次。如果出现 1 次，它同时设定 background-origin 和 background-clip。如果出现 2 次，第一次的出现设置 background-origin，第二次的出现设置 background-clip。
+<background-color> 只能被包含在最后一层。 */
+}
+
+.many-div-container{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  
+}
+
+.vintage-envelope{
+  width: 200px;
+  height: 200px;
+  padding: 1em;
+  border: 1em solid transparent;
+  background: linear-gradient(white, white) padding-box,
+  repeating-linear-gradient(-45deg,red 0,red 12.5%,transparent 0,transparent 25%,#58a 0, #58a 37.5%,transparent 0,transparent 50%)  0 / 6em 6em;
+
+}
+
+.vintage-envelope-image-border{
+  width: 200px;
+  height: 200px;
+  border: 16px solid transparent;
+	border-image: 16 repeating-linear-gradient(-45deg, red 0, red 1em, transparent 0, transparent 2em,#58a 0, #58a 3em, transparent 0, transparent 4em);
+}
+
+@keyframes ants { to { background-position: 100% 100% } }
+
+.ants-border {
+  width: 200px;
+  height: 200px;
+	padding: 1em;
+	border: 1px solid transparent;
+	background: linear-gradient(white, white) padding-box,
+	            repeating-linear-gradient(-45deg, black 0, black 25%, transparent 0, transparent 50%) 0 / .6em .6em;
+	animation: ants 12s linear infinite;
 }
